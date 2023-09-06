@@ -1,0 +1,97 @@
+body {
+  font-family: sans-serif;
+  background-color: black;
+  color: antiquewhite;
+  background-image: url('img/miles-img1.jpg');
+  background-size: 900px 1700px;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  color: orangered;
+}
+
+.menu {
+  text-align: center;
+  font-size: 25px;
+  margin: -20px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.menu :hover {
+  color: orangered;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid antiquewhite;
+  border-radius: 5px;
+  margin-top: 130px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid antiquewhite;
+  border-radius: 3px;
+  background-color: orangered;
+  color: antiquewhite;
+}
+
+#registration-form {
+  margin-right: 20px;
+}
+
+button {
+  background-color: antiquewhite;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+  align-items: center;
+  width: 106%;
+  color: orangered;
+}
+
+button:hover {
+  background-color: rgb(1, 128, 130);
+}
+
+.link {
+  font-size: 25px;
+  text-align: center;
+  color: orangered;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.link :hover {
+  color: orangered;
+  text-decoration: underline;
+}
+
+.socials {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 40px;
+}

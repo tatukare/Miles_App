@@ -1,0 +1,68 @@
+body {
+  font-family: sans-serif;
+  background-color: black;
+  color: antiquewhite;
+  background-image: url('img/miles-img1.jpg');
+  background-size: 900px 1700px;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 50px;
+  color: orangered;
+}
+
+.menu {
+  text-align: center;
+  font-size: 25px;
+  margin: -20px;
+  margin-right: 20px;
+}
+
+.menu :hover {
+  color: orangered;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.reseña {
+  margin: 150px;
+  text-align: center;
+  font-size: 20px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.link {
+  font-size: 25px;
+  text-align: center;
+  color: orangered;
+}
+
+.link :hover {
+  color: orangered;
+  text-decoration: underline;
+}
+
+.records {
+  text-align: center;
+  margin: 50px;
+  font-size: 25px;
+  font-weight: 200px;
+}
+
+.discos {
+  font-size: 20px;
+  margin-left: 500px;
+}
+
+.socials {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 40px;
+}

@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+  background-color: black;
+  color: antiquewhite;
+  background-image: url('img/miles-img1.jpg');
+  background-size: 900px 1700px;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  color: orangered;
+}
+
+.menu {
+  text-align: center;
+  font-size: 25px;
+  margin: -20px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.menu :hover {
+  color: orangered;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
