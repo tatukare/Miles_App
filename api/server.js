@@ -7,6 +7,11 @@ const users = require('./routes/users');
 const PORT = 3000;
 // http://localhost:3000/api/users
 
+app.use((req, res, next) => {
+  res.header('Acces-Control-Allow-Origin', '*');
+  next();
+});
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 

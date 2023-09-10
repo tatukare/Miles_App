@@ -1,19 +1,30 @@
 const express = require('express');
 const router = express.Router();
 
-const { getUserById, getIndexOfUser } = require('./helpers');
+const { getUserById, getIndexOfUser, getUserByEmail } = require('./helpers');
 
 const usersList = [
-  { id: 1, name: 'Carlos', email: 'example@gmail.com' },
-  { id: 2, name: 'Rigo', email: 'rigonator@gmail.com' },
-  { id: 3, name: 'Egan', email: 'eganzipa@gmail.com' },
+  { id: 1, name: 'Carlos', email: 'example@gmail.com', password: '123' },
+  { id: 2, name: 'Rigo', email: 'rigonator@gmail.com', password: '123' },
+  { id: 3, name: 'Egan', email: 'eganzipa@gmail.com', password: '123' },
 ];
 
-router.get('/:id', (req, res) => {
+router.get('/id/:id', (req, res) => {
   const { id } = req.params;
 
   const user = getUserById(usersList, id);
 
+  if (!user) return res.status(404).json({ message: 'User not Found' });
+
+  res.json({ data: user });
+});
+
+router.get('/email/:email', (req, res) => {
+  const { email } = req.params;
+
+  const user = getUserByEmail(usersList, email);
+
+  console.log(user);
   if (!user) return res.status(404).json({ message: 'User not Found' });
 
   res.json({ data: user });

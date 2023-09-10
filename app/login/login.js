@@ -1,20 +1,61 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
-  const loginForm = document.getElementById('login-form');
+const getUserByEmail = async (userEmail) => {
+  const response = await fetch(
+    `http://localhost:3000/api/users/email/${userEmail}`
+  );
+  return response.json();
+};
 
-  loginForm.addEventListener('submit', function (event) {
-    event.preventDefault();
+const loginForm = document.getElementById('login-form');
+const userEmail = document.getElementById('userEmail');
+const userPassword = document.getElementById('userPassword');
 
-    const userName = document.getElementById('userName').value;
-    const password = document.getElementById('password').value;
+const handleError = (errorMessage) => {
+  const errorElement = document.createElement('p');
+  errorElement.textContent = errorMessage;
+  errorElement.classList.add('error-mesage');
 
-    if (userName === 'user' && password === 'password') {
-      alert('Login Exitoso');
-    } else {
-      alert('Nombre de usuario o contraseña incorrectos');
+  loginForm.insertAdjacentElement('beforebegin', errorElement);
+};
+
+const removeError = () => {
+  const errorElement = document.querySelector('.error-mesage');
+
+  if (errorElement) {
+    errorElement.remove();
+  }
+};
+
+const handleInputKeyPress = () => {
+  removeError();
+};
+
+const handleOnSumbit = async (event) => {
+  event.preventDefault();
+
+  const email = userEmail.value;
+  const password = userPassword.value;
+
+  if (!email.trim() || !password.trim()) {
+    handleError('Email and password are required');
+    return;
+  }
+
+  try {
+    const { data: user } = await getUserByEmail(email);
+
+    if (!user || user.password !== password) {
+      handleError('Incorrect user or password');
+      return;
     }
+    document.cookie = `userName${user.name}`;
+    window.location.replace('../home');
+  } catch (error) {
+    console.error('error:', error);
+  }
+};
 
-    loginForm.reset();
-  });
-});
+loginForm.addEventListener('submit', handleOnSumbit);
+userEmail.addEventListener('keypress', handleInputKeyPress);
+userPassword.addEventListener('keypress', handleInputKeyPress);
