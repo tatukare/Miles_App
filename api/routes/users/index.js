@@ -38,10 +38,12 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  const { name, email } = req.body;
+  const { name, email, password } = req.body;
 
-  if (!name || !email)
-    return res.status(400).json({ message: 'User and email are required' });
+  if (!name || !email || !password)
+    return res
+      .status(400)
+      .json({ message: 'User, email and password are required' });
 
   const user = usersList.filter((u) => u.email === email);
   if (user.length > 0)
@@ -49,7 +51,7 @@ router.post('/', (req, res) => {
 
   const lastUserIndex = usersList.length - 1;
   const id = lastUserIndex < 0 ? 1 : usersList[lastUserIndex].id + 1;
-  usersList.push({ id, name, email });
+  usersList.push({ id, name, email, password });
   res.status(201).json({ id, name, email });
 });
 
