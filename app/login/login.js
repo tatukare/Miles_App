@@ -49,7 +49,9 @@ const handleOnSumbit = async (event) => {
       handleError('Incorrect user or password');
       return;
     }
-    document.cookie = `userName${user.name}`;
+    document.cookie = `userName=${user.name}; path=/; SameSite=None; Secure`;
+    document.cookie = `userEmail=${user.email}; path=/; SameSite=None; Secure`;
+
     window.location.replace('../home');
   } catch (error) {
     console.error('error:', error);
