@@ -1,58 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
+
     <title>🎺 MILES</title>
     <script defer src="./home.js"></script>
   </head>
   <body>
-    <header class="main-header">
-      <h1>Miles Davis Trumpet</h1>
+    <div class="container-box">
+      <header class="main-header">
+        <h1>Miles Davis Trumpet</h1>
 
-      <nav class="menu">
-        <!-- <a href="#">Home</a> -->
-        <a id="login" href="../login">Login</a>
-        <a id="register" href="../register">Register</a>
-        <span id="user-name" class="hidden">Carlos</span>
-      </nav>
-    </header>
-    <article>
-      <div>
-        <p class="reseña">
-          La leyenda de la trompeta <strong>Miles Davis</strong> es uno de los
-          músicos mas importantes en la historia de la música, su innovación y
-          talento lo convierten en una de las figuras mas influyentes en la
-          historia del <em>Jazz</em>.
-        </p>
-      </div>
-      <div class="link">
-        <a href="https://www.milesdavis.com/" target="_blank">Miles Oficial</a>
-      </div>
+        <nav class="menu">
+          <!-- <a href="#">Home</a> -->
+          <a id="login" href="../login">Login</a>
+          <a id="register" href="../register">Register</a>
+          <span id="user-name" class="hidden">Carlos</span>
+        </nav>
+      </header>
+      <article>
+        <div class="container">
+          <img
+            class="trumpet"
+            src="../assets/img/miles-img7.png"
+            alt="Trumpet"
+          />
 
-      <h3 class="records">
-        Los discos mas importantes de <em>Miles Davis </em> son:
-      </h3>
+          <div class="review">
+            <h2 class="container-tittle">Reseña</h2>
 
-      <div class="discos">
-        <ol>
-          <li>King of Blue (1959)</li>
-          <li>Sketches of Spain (1960)</li>
-          <li>Porgy and Bess (1959)</li>
-          <li>Your're Under Arrest (1985)</li>
-          <li>Bitches Brew (1970)</li>
-          <li>In a Silent Way (1969)</li>
-          <li>Birth of the Cool (1957)</li>
-        </ol>
-      </div>
-    </article>
-    <footer class="socials">
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
-      <a href="#" class="fa fa-facebook" style="color: orangered"></a>
-      <a href="#" class="fa fa-twitter" style="color: orangered"></a>
-      <a href="#" class="fa fa-instagram" style="color: orangered"></a>
-    </footer>
+            <p class="container-text">
+              La leyenda de la trompeta <strong>Miles Davis</strong> es uno de
+              los músicos mas importantes en la historia de la música, su
+              innovación y talento lo convierten en una de las figuras mas
+              influyentes en la historia del <em>Jazz</em>.
+            </p>
+
+            <p class="author-review">-- By TUKA--</p>
+          </div>
+        </div>
+        <div class="link">
+          <a href="https://www.milesdavis.com/" target="_blank"
+            >Miles Oficial</a
+          >
+        </div>
+
+        <div class="recors-container">
+          <h3 class="records-tittle">
+            Los discos mas importantes de <em>Miles Davis </em> son:
+          </h3>
+
+          <div class="records">
+            <ol>
+              <li>King of Blue (1959)</li>
+              <li>Sketches of Spain (1960)</li>
+              <li>Porgy and Bess (1959)</li>
+              <li>Your're Under Arrest (1985)</li>
+              <li>Bitches Brew (1970)</li>
+              <li>In a Silent Way (1969)</li>
+              <li>Birth of the Cool (1957)</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+
+      <!-- <div class="cards">
+        <h2>Para la venta</h2>
+        <figure class="card">
+          <img src="../assets/img/miles-img.jpg" alt="Miles-1" />
+
+          <div class="card-box">
+            <h3></h3>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <div class="record-price">
+              <strong>$35 USD</strong>
+              <a href="#" class="btn">Add to cart</a>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="card">
+          <img src="../assets/img/miles-img1.jpg" alt="Miles-2" />
+
+          <div class="card-box">
+            <h3></h3>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <div class="record-price">
+              <strong>$35 USD</strong>
+              <a href="#" class="btn">Add to cart</a>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="card">
+          <img src="../assets/img/miles-img2.jpg" alt="Miles-3" />
+
+          <div class="card-box">
+            <h3></h3>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <div class="record-price">
+              <strong>$35 USD</strong>
+              <a href="#" class="btn">Add to cart</a>
+            </div>
+          </div>
+        </figure>
+      </div> -->
+
+      <footer class="socials">
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <a href="#" class="fa fa-facebook" style="color: orangered"></a>
+        <a href="#" class="fa fa-twitter" style="color: orangered"></a>
+        <a href="#" class="fa fa-instagram" style="color: orangered"></a>
+      </footer>
+    </div>
   </body>
 </html>

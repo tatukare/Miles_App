@@ -1,23 +1,48 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
-  background-color: black;
-  color: antiquewhite;
-  background-image: url('../assets/img/miles-img1.jpg');
-  background-size: 900px 1700px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #014551;
+  background-image: url('../assets/img/miles-img6.png');
+}
+
+.main-header {
+  margin-top: 52px;
+  margin-bottom: 96px;
 }
 
 h1 {
   text-transform: uppercase;
   text-align: center;
-  font-size: 50px;
+  font-size: 44px;
   color: orangered;
+  letter-spacing: -1.5px;
+
+  margin-bottom: 24px;
 }
 
 .menu {
-  text-align: center;
-  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+
+  font-size: 24px;
+
+  /* text-align: center;
   margin: -20px;
-  margin-right: 20px;
+  margin-right: 20px; */
 }
 
 .menu a:hover {
@@ -29,23 +54,70 @@ h1 {
   display: none;
 }
 
-a {
-  text-decoration: none;
-  color: antiquewhite;
+#user-name {
+  color: #99e9f2;
 }
 
-.reseña {
-  margin: 150px;
-  text-align: center;
-  font-size: 20px;
-  padding-left: 150px;
-  padding-right: 150px;
+a {
+  text-decoration: none;
+  color: #99e9f2;
+  letter-spacing: -1.5px;
+}
+
+.container {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  gap: 80px;
+  margin-bottom: 96px;
+  padding: 36px;
+
+  box-shadow: 0 0 30px rgba(10, 10, 10, 1);
+  border-radius: 12px;
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  border-radius: 12px;
+  background-image: url('../assets/img/miles-img8.png');
+  opacity: 0.4;
+
+  position: absolute;
+  inset: 0;
+}
+
+.trumpet {
+  height: 168px;
+  border-radius: 12px;
+  align-self: center;
+  isolation: isolate;
+}
+
+.review {
+  color: #e3fafc;
+  opacity: 1;
+  isolation: isolate;
+}
+
+.container-tittle {
+  font-size: 30px;
+  margin-bottom: 32px;
+  /* color: antiquewhite; */
+}
+
+.container-text {
+  margin-bottom: 32px;
+  color: #c5f6fa;
+  line-height: 1.5;
 }
 
 .link {
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
-  color: orangered;
+  letter-spacing: -1;
+  margin-bottom: 96px;
+  color: antiquewhite;
 }
 
 .link :hover {
@@ -53,20 +125,84 @@ a {
   text-decoration: underline;
 }
 
-.records {
-  text-align: center;
-  margin: 50px;
-  font-size: 25px;
-  font-weight: 200px;
+.recors-container {
+  margin-bottom: 128px;
 }
 
-.discos {
-  font-size: 20px;
-  margin-left: 500px;
+.records-tittle {
+  font-size: 24px;
+  font-weight: 500;
+  color: #e3fafc;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.records {
+  font-size: 18px;
+  list-style: circle;
+  line-height: 2;
+  color: #c5f6fa;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-self: auto;
+
+  margin-bottom: 96px;
+}
+
+ol {
+  text-align: left;
+}
+
+li::marker {
+  color: orangered;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 80px;
+
+  width: 700px;
+}
+
+.card {
+  /* width: 250px;
+  height: 200px; */
+}
+
+/* .card img {
+  width: 250;
+  height: 200px;
+} */
+
+h2 {
+  font-size: 36px;
+  color: #e3fafc;
+
+  grid-column: 1 / -1;
+}
+
+.record-price {
+  display: flex;
+  justify-content: space-between;
 }
 
 .socials {
-  text-align: center;
-  font-size: 50px;
-  margin-top: 40px;
+  font-size: 44px;
+
+  display: flex;
+  gap: 48px;
+  justify-content: center;
 }
+/*
+ Partial list of types 
+list-style-type: disc;
+list-style-type: circle;
+list-style-type: square;
+list-style-type: decimal;
+list-style-type: georgian;
+list-style-type: trad-chinese-informal;
+list-style-type: kannada;
+*/

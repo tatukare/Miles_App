@@ -1,4 +1,141 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #014551;
+  background-image: url('../assets/img/miles-img6.png');
+}
+
+.main-header {
+  margin-top: 52px;
+  margin-bottom: 200px;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 44px;
+  color: orangered;
+  letter-spacing: -1.5px;
+
+  margin-bottom: 24px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+
+  font-size: 24px;
+
+  /* text-align: center;
+  margin: -20px;
+  margin-right: 20px; */
+}
+
+a {
+  text-decoration: none;
+  color: #99e9f2;
+  letter-spacing: -1.5px;
+}
+
+.menu a:hover {
+  color: orangered;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #e3fafc;
+  /* border-radius: 6px; */
+  margin-bottom: 128px;
+
+  box-shadow: 0 0 40px rgba(10, 10, 10, 1);
+  border-radius: 6px;
+}
+
+.container h1 {
+  font-size: 36px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #c5f6fa;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  width: 106%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e3fafc;
+  border-radius: 8px;
+  background-color: orangered;
+  color: antiquewhite;
+}
+
+#registration-form {
+  margin-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+button {
+  background-color: #c5f6fa;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  align-items: center;
+  width: 106%;
+  color: orangered;
+}
+
+button:hover {
+  background-color: #99e9f2;
+}
+
+.link {
+  font-size: 25px;
+  text-align: center;
+  color: orangered;
+  /* margin-top: 200px; */
+  margin-bottom: 128px;
+}
+
+.link :hover {
+  color: orangered;
+  text-decoration: underline;
+}
+
+.socials {
+  font-size: 44px;
+
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+}
+
+/* body {
   font-family: sans-serif;
   background-color: black;
   color: antiquewhite;
@@ -94,4 +231,4 @@ button:hover {
   text-align: center;
   font-size: 50px;
   margin-top: 40px;
-}
+} */
